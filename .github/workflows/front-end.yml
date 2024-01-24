@@ -1,23 +1,21 @@
-name: Deploy to S3
+name: Update Website on S3
 
 on:
   push:
     branches:
-      - main
+    - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Deploy to S3
-      uses: jakejarvis/s3-sync-action@master
+    - uses: actions/checkout@master
+    - uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: eu-west-2
-        SOURCE_DIR: "aws cloud resume challenge"
+        AWS_REGION: 'eu-west-2'   
+        SOURCE_DIR: 'AWS CLOUD RESUME CHALLENGE'     
