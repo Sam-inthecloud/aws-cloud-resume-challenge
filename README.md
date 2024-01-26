@@ -7,7 +7,6 @@ This project is my submission for the AWS Cloud Resume Challenge.
 
 ## Project Overview
 - Website : https://saminthecloud.tech
-- Region : EU-WEST-2
 
 **Services Used**:
 - Amazon S3: Used to store and serve the static website files (html/css/js/img).
