@@ -18,4 +18,5 @@ This project is my submission for the AWS Cloud Resume Challenge.
 - Lambda: Handles the serverless functions to update and retrieve the resume data (Visitor Count).
 - API Gateway: Provides an API for interacting with the Lambda functions.
 - DynamoDB: A NoSQL database for storing the retrieved resume data(Visitor Count).
-- GitHub: For CI/CD (continuous intergration and deployement of the website)
+- GitHub: For Source Control and CI/CD (continuous intergration and deployement of the website)
+- Terraform: Used to deploy the lambda function as a code.
